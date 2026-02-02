@@ -34,6 +34,26 @@ The core Spring Boot API that powers the Marketing Command Centre.
 - User-based Request Queries
 - Date Range Audit Reports
 
+### Dashboard
+The frontend dashboard application for visualizing and managing marketing requests.
+
+**Key Features:**
+- 📊 Interactive request dashboard
+- 📈 Analytics and reporting
+- 👥 User-friendly request submission interface
+- 🔍 Advanced filtering and search capabilities
+- 📱 Responsive design for mobile and desktop
+
+### Discord Bot
+An automated Discord bot for streamlined marketing request management within the UTM MSA Discord server.
+
+**Key Features:**
+- 🤖 Discord command integration
+- 📝 Submit requests directly from Discord
+- 🔔 Real-time notifications for request updates
+- 📊 Quick status checks and queries
+- 🔗 Seamless integration with backend API
+
 ## 🚀 Getting Started
 
 ### Backend Setup
@@ -44,6 +64,18 @@ The core Spring Boot API that powers the Marketing Command Centre.
    ./mvnw spring-boot:run
    ```
 4. Access the API at `http://localhost:8080`
+
+### Dashboard Setup
+1. Clone the dashboard repository
+2. Install dependencies
+3. Configure API endpoint to connect to the backend
+4. Run the development server
+
+### Discord Bot Setup
+1. Clone the discord bot repository
+2. Install dependencies
+3. Configure bot token and API endpoint
+4. Run the bot to connect to your Discord server
 
 ## 🎯 Use Cases
 
@@ -57,28 +89,31 @@ The Marketing Command Centre is designed to help the UTM MSA:
 ## 🛠️ System Architecture
 
 ```
-┌─────────────────┐
-│   Frontend      │  (Coming Soon)
-│  Application    │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Spring Boot    │
-│   Backend API   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│     SQLite      │
-│    Database     │
-└─────────────────┘
+┌─────────────────┐         ┌─────────────────┐
+│   Dashboard     │         │  Discord Bot    │
+│   (Frontend)    │         │                 │
+└────────┬────────┘         └────────┬────────┘
+         │                           │
+         │                           │
+         └───────────┬───────────────┘
+                     │
+                     ▼
+         ┌─────────────────────┐
+         │   Spring Boot API   │
+         │   (Backend)         │
+         └──────────┬──────────┘
+                    │
+                    ▼
+         ┌─────────────────────┐
+         │   SQLite Database   │
+         └─────────────────────┘
 ```
 
 ## 📊 Current Status
 
 - ✅ Backend API - **Active Development**
-- 🔄 Frontend Application - **Coming Soon**
+- ✅ Dashboard - **Active Development**
+- ✅ Discord Bot - **Active Development**
 - 📱 Mobile Integration - **Planned**
 
 ## 🤝 Contributing
